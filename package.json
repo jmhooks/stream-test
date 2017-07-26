@@ -1,11 +1,12 @@
 {
-  "name": "stream-test",
+  "name": "mp4-stream-test",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aws-sdk": "^2.90.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
@@ -29,5 +30,5 @@
     "url": "https://github.com/jmhooks/stream-test/issues"
   },
   "homepage": "https://github.com/jmhooks/stream-test#readme",
-  "description": ""
+  "description": "Test FFMPEG auto transcode from several video formats to MP4"
 }

@@ -15,7 +15,7 @@ function getNames() {
             name = name.trim();
             $('#nameSelect').append('<option value="' + name.toLowerCase() + '">' + (name.charAt(0).toUpperCase() + name.slice(1)) + '</option>');
             if(counter === data.length) {
-                $('#videoPlayer').html("<video controls><source src='https://s3.us-east-2.amazonaws.com/stream-test-decode/" + data[0] + ".mp4' type='video/mp4'>Your browser does not support HTML5 video.</video>");
+                $('#videoPlayer').html("<video controls><source src='https://s3.us-east-2.amazonaws.com/stream-test-decode/videos/" + data[0] + ".mp4' type='video/mp4'>Your browser does not support HTML5 video.</video>");
             }
         })
     });
@@ -30,5 +30,5 @@ $(document).ready(function(){
 });
 
 $('#nameSelect').change(function(){
-    $('#videoPlayer').html("<video controls><source src='https://s3.us-east-2.amazonaws.com/stream-test-decode/" + $('#nameSelect').val() + ".mp4' type='video/mp4'>Your browser does not support HTML5 video.</video>");
+    $('#videoPlayer').html("<video controls><source src='https://s3.us-east-2.amazonaws.com/stream-test-decode/videos/" + $('#nameSelect').val() + ".mp4' type='video/mp4'>Your browser does not support HTML5 video.</video>");
 });
