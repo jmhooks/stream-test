@@ -7,10 +7,6 @@ var aws = require('aws-sdk');
 
 var connection = null;
 
-router.get('/', function(req, res) {
-    res.sendFile('public/stream.html', {root: '.'});
-});
-
 /**
  * Transcode and push all video files to S3
  */
@@ -107,7 +103,6 @@ function transcodeVideo(fileName) {
         .on('progress', function(info) {
             console.log('progress ' + info.percent + '%');
         })
-
         .on('end', function() {
             console.log(fileNoExt + ' has been converted successfully');
             fs.readFile('data/in/' + fileName, function(err, data) {
